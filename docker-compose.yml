@@ -10,8 +10,8 @@ services:
 
   backend:
     build:
-      context: ToDosBE
-    container_name: todos-backend
+      context: ./ToDOsBE
+    container_name: ToDos-backend
     restart: always
     depends_on:
       - mongo
@@ -22,8 +22,8 @@ services:
 
   frontend:
     build:
-      context: ToDosFE
-    container_name: todos-frontend
+      context: ./ToDOsFE
+    container_name: ToDos-frontend
     restart: always
     depends_on:
       - backend
